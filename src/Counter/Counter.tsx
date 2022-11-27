@@ -5,52 +5,42 @@ import {Btn} from "./Btn";
 
 type CounterPropsType={
     counterValue: number
+    startValue: number
+    notify: string | null
     setCounterValue: (counter: number) => void
+    maxValue:number
+    disabled: boolean
 }
 
 export const Counter = (props:CounterPropsType) => {
 
-
-    // useEffect(() => {
-    //     let valueString = localStorage.getItem("counterValue")
-    //     if(valueString){
-    //         let newValue = JSON.parse(valueString)
-    //         props.setCounter(newValue)
-    //     }
-    // }, [])
-
-    //
-    // useEffect(() => {
-    //     setValueLocalStorage()
-    // }, [props.counter])
-
-
     const btnIncHandler = () =>{
-        props.setCounterValue(props.counterValue + 1)
+        props.setCounterValue(props.counterValue +1)
     }
 
     const btnResetHandler = () =>{
-        props.setCounterValue(0)
+        props.setCounterValue(props.startValue)
     }
 
-    const btnIncClassName = props.counterValue === 5 ? "disabled" : ""
-    const btnResetClassName = props.counterValue === 0 ? "disabled" : ""
+    const forIncClass = props.notify || props.counterValue === props.maxValue
+    const forResetClass = props.notify || props.counterValue === props.startValue
 
-    const setValueLocalStorage = () =>{
-        // localStorage.setItem("counterValue", JSON.stringify(props.counter))
-    }
+    const btnIncClassName =  forIncClass ? "disabled" : ""
+    const btnResetClassName = forResetClass ? "disabled" : ""
 
 
     return (
         <div className={"counter"}>
-            <CounterDisplay counter={props.counterValue}/>
+            <CounterDisplay counter={props.counterValue}
+                            notify={props.notify}
+                            maxValue={props.maxValue}
+                            disabled={props.disabled}
+            />
 
             <div className={"btnWrap"}>
                 <Btn callBack={btnIncHandler} name={"inc"} class={btnIncClassName}/>
                 <Btn callBack={btnResetHandler} name={"reset"} class={btnResetClassName}/>
             </div>
-
-
 
         </div>
     );
