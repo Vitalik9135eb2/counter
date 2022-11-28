@@ -30,45 +30,19 @@ function App() {
         }, [])
 
 
+    const showNotifySetDisabled = (disabled:boolean,notify:string) => {
+        setDisabled(disabled)
+        setNotify(notify)
+    }
     const errorCheck = (value: number, inputName: InputNameType) => {
-        if(inputName === 'start' && value > maxValue){
-
-            setDisabled(true)
-            setNotify("Incorrect value")
-
-        } else if(inputName === 'start' && value === maxValue){
-
-            setDisabled(true)
-            setNotify("Incorrect value")
-
-        } else if( inputName === 'start' && value < 0){
-
-            setDisabled(true)
-            setNotify("Incorrect value")
-
-        } else if(inputName === 'max' && value < startValue){
-
-            setDisabled(true)
-            setNotify("Incorrect value")
-
-        } else if(inputName === 'max' && value === startValue) {
-
-            setDisabled(true)
-            setNotify("Incorrect value")
-
-        } else if(inputName === 'max' && value < 0){
-
-            setDisabled(true)
-            setNotify("Incorrect value")
-
+        if(inputName === 'start' && value > maxValue || value === maxValue || value < 0){
+            showNotifySetDisabled(true,"Incorrect value")
+        } else if(inputName === 'max' && value < startValue || value === startValue || value < 0){
+            showNotifySetDisabled(true,"Incorrect value")
         } else {
-
-            setDisabled(false)
-            setNotify("enter values and press 'set' ")
+            showNotifySetDisabled(false,"enter values and press 'set'")
         }
     }
-
-
 
 
     return (

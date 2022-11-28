@@ -22,6 +22,7 @@ export const SettingCounter = (props:SettingCounterPropsType) => {
     const btnClassName = props.disabled ? "disabled" : " "
 
 
+    const inputSettingClass = `${"input"} ${props.disabled ? "error" : ''}`
 
     const btnSetHandler = () => {
         props.setCounterValue(props.startValue)
@@ -31,7 +32,7 @@ export const SettingCounter = (props:SettingCounterPropsType) => {
 
     }
 
-    const onChangeStartValueHandler = (e:ChangeEvent<HTMLInputElement>) => {
+    const onChangeStartValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.currentTarget.value)
         props.setStartValue(value)
         props.errorCheck(value, 'start')
@@ -47,12 +48,14 @@ export const SettingCounter = (props:SettingCounterPropsType) => {
         <div className={"counter"}>
             <div>
                 <span>Start Value</span>
-                <input value={props.startValue} onChange={onChangeStartValueHandler} type="number"/>
+                <input className={inputSettingClass} value={props.startValue} onChange={onChangeStartValueHandler}
+                       type="number"/>
             </div>
 
             <div>
                 <span>Max Value</span>
-                <input value={props.maxValue} onChange={onChangeMaxValueHandler} type="number"/>
+                <input className={inputSettingClass} value={props.maxValue} onChange={onChangeMaxValueHandler}
+                       type="number"/>
             </div>
 
             <Btn callBack={btnSetHandler} name={"Set"} class={btnClassName}/>
