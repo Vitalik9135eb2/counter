@@ -8,6 +8,8 @@ type BtnPropsType ={
 
 export const Btn = (props:BtnPropsType) => {
 
+    console.log("Btn is loaded")
+
     const onclickBtnHandler = () =>{
         props.callBack()
     }

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {CounterDisplay} from "./CounterDisplay";
 import {Btn} from "./Btn";
 
@@ -12,15 +12,16 @@ type CounterPropsType={
     disabled: boolean
 }
 
-export const Counter = (props:CounterPropsType) => {
+export const Counter = React.memo( (props:CounterPropsType) => {
+    console.log("Counter is loaded")
 
-    const btnIncHandler = () =>{
+    const btnIncHandler = useCallback(() =>{
         props.setCounterValue(props.counterValue +1)
-    }
+    },[props.setCounterValue, props.counterValue])
 
-    const btnResetHandler = () =>{
+    const btnResetHandler = useCallback( () =>{
         props.setCounterValue(props.startValue)
-    }
+    },[props.startValue, props.setCounterValue])
 
     const forIncClass = props.notify || props.counterValue === props.maxValue
     const forResetClass = props.notify || props.counterValue === props.startValue
@@ -44,7 +45,7 @@ export const Counter = (props:CounterPropsType) => {
 
         </div>
     );
-};
+});
 
 
 

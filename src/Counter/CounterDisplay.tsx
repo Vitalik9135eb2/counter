@@ -7,7 +7,8 @@ type CounterDisplayPropsType ={
     disabled:boolean
 }
 
-export const CounterDisplay = (props:CounterDisplayPropsType) => {
+export const CounterDisplay = React.memo( (props:CounterDisplayPropsType) => {
+    console.log("CounterDisplay is loaded")
 
 
     const displayClass = `${"display"} ${props.disabled ? "error" : ''} 
@@ -23,4 +24,4 @@ export const CounterDisplay = (props:CounterDisplayPropsType) => {
             {display}
         </div>
     )
-}
+})

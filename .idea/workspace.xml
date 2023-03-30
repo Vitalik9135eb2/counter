@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b545819-608e-456f-9b8c-6bcb05c3200e" name="Changes" comment="New counter full">
+    <list default="true" id="5b545819-608e-456f-9b8c-6bcb05c3200e" name="Changes" comment="fix check input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Btn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Btn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +72,13 @@
       <updated>1669394232814</updated>
       <workItem from="1669394234736" duration="21313000" />
       <workItem from="1669622018535" duration="20000" />
-      <workItem from="1669643315961" duration="1592000" />
+      <workItem from="1669643315961" duration="1902000" />
+      <workItem from="1669743785290" duration="1597000" />
+      <workItem from="1671347582580" duration="19000" />
+      <workItem from="1671348995842" duration="17000" />
+      <workItem from="1672212984042" duration="622000" />
+      <workItem from="1672213802951" duration="17000" />
+      <workItem from="1680187657761" duration="1592000" />
     </task>
     <task id="LOCAL-00001" summary="New counter full">
       <created>1669565355143</created>
@@ -77,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669565355143</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix check input">
+      <created>1669645212601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645212601</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +113,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New counter full" />
-    <option name="LAST_COMMIT_MESSAGE" value="New counter full" />
+    <MESSAGE value="fix check input" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix check input" />
   </component>
 </project>

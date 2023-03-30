@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, useCallback, useEffect, useState} from 'react';
 import {Btn} from "../Counter/Btn";
 
 
@@ -18,19 +18,21 @@ export type InputNameType = 'start' | 'max'
 
 export const SettingCounter = (props:SettingCounterPropsType) => {
 
+    console.log("SettingCounter is loaded")
+
 
     const btnClassName = props.disabled ? "disabled" : " "
 
 
     const inputSettingClass = `${"input"} ${props.disabled ? "error" : ''}`
 
-    const btnSetHandler = () => {
+    const btnSetHandler = useCallback( () => {
         props.setCounterValue(props.startValue)
-        localStorage.setItem("start", JSON.stringify(props.startValue))
-        localStorage.setItem("max", JSON.stringify(props.maxValue))
+        // localStorage.setItem("start", JSON.stringify(props.startValue))
+        // localStorage.setItem("max", JSON.stringify(props.maxValue))
         props.setNotify(null)
 
-    }
+    },[props.setCounterValue,props.startValue, props.setNotify])
 
     const onChangeStartValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.currentTarget.value)
