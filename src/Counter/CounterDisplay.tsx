@@ -1,9 +1,9 @@
 import React from "react";
 
 type CounterDisplayPropsType ={
-    counter: number
+    counter?: number
     notify: string | null
-    maxValue: number
+    maxValue: number | undefined
     disabled:boolean
 }
 

@@ -5,19 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b545819-608e-456f-9b8c-6bcb05c3200e" name="Changes" comment="fix check input">
+      <change afterPath="$PROJECT_DIR$/src/AppWithReducers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/counter-reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/counter-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Btn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Btn.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Counter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,11 +44,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/React/it-incubator/counter",
+    "last_opened_file_path": "D:/React/it-incubator/counter/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "D:/React/it-incubator/counter/node_modules/react-scripts",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.appearance",
@@ -47,7 +57,64 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\React\it-incubator\counter\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Increment counter value">
+    <configuration name="Increment counter value" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/state/counter-reducer.test.ts" />
+      <test-names>
+        <test-name value="Increment counter value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Reset counter value" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/state/counter-reducer.test.ts" />
+      <test-names>
+        <test-name value="Reset counter value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Set start counter value" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/state/counter-reducer.test.ts" />
+      <test-names>
+        <test-name value="Set start counter value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Set start value" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/state/counter-reducer.test.ts" />
+      <test-names>
+        <test-name value="Set start value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -61,6 +128,14 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Increment counter value" />
+        <item itemvalue="Jest.Reset counter value" />
+        <item itemvalue="Jest.Set start counter value" />
+        <item itemvalue="Jest.Set start value" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,6 +154,7 @@
       <workItem from="1672212984042" duration="622000" />
       <workItem from="1672213802951" duration="17000" />
       <workItem from="1680187657761" duration="1592000" />
+      <workItem from="1680254454957" duration="12659000" />
     </task>
     <task id="LOCAL-00001" summary="New counter full">
       <created>1669565355143</created>

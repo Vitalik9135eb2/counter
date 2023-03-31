@@ -1,30 +1,43 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useReducer, useState} from 'react';
 import {CounterDisplay} from "./CounterDisplay";
 import {Btn} from "./Btn";
+import {counterReducer, incAC, resetAC} from "../state/counter-reducer";
+
+
 
 
 type CounterPropsType={
-    counterValue: number
-    startValue: number
+    // startValue: number
+    // maxValue: number
     notify: string | null
-    setCounterValue: (counter: number) => void
-    maxValue:number
     disabled: boolean
 }
 
 export const Counter = React.memo( (props:CounterPropsType) => {
     console.log("Counter is loaded")
 
+    useEffect(()=>{
+        dispatchCounterValue(resetAC())
+    },[])
+
+    const [counterValue, dispatchCounterValue] = useReducer(counterReducer,{
+        value: 0,
+        startValue: 2,
+        maxValue: 8
+    })
+
     const btnIncHandler = useCallback(() =>{
-        props.setCounterValue(props.counterValue +1)
-    },[props.setCounterValue, props.counterValue])
+        dispatchCounterValue(incAC())
+    },[])
 
     const btnResetHandler = useCallback( () =>{
-        props.setCounterValue(props.startValue)
-    },[props.startValue, props.setCounterValue])
+        const action = resetAC()
+        dispatchCounterValue(action)
+    },[])
 
-    const forIncClass = props.notify || props.counterValue === props.maxValue
-    const forResetClass = props.notify || props.counterValue === props.startValue
+
+    const forIncClass = props.notify || counterValue.value === counterValue.maxValue
+    const forResetClass = props.notify || counterValue.value === counterValue.startValue
 
     const btnIncClassName =  forIncClass ? "disabled" : ""
     const btnResetClassName = forResetClass ? "disabled" : ""
@@ -32,9 +45,9 @@ export const Counter = React.memo( (props:CounterPropsType) => {
 
     return (
         <div className={"counter"}>
-            <CounterDisplay counter={props.counterValue}
+            <CounterDisplay counter={counterValue.value}
                             notify={props.notify}
-                            maxValue={props.maxValue}
+                            maxValue={counterValue.maxValue}
                             disabled={props.disabled}
             />
 
