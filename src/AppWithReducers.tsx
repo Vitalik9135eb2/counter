@@ -4,6 +4,9 @@ import {Counter} from "./Counter/Counter";
 import {InputNameType, SettingCounter} from "./SettingCounter/SettingCounter";
 import {counterReducer} from "./state/counter-reducer";
 
+
+
+
 function AppWithReducers() {
 
     console.log("App is loaded")
@@ -47,9 +50,10 @@ function AppWithReducers() {
     //     }
     // },[])
 
-
+const CounterContext = React.createContext({disabled, setDisabled})
     return (
     <div className="App">
+
         <Counter
             // startValue={startValue}
             // maxValue={maxValue}
