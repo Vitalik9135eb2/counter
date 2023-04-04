@@ -1,25 +1,34 @@
-import React from "react";
 
+type NotifyType = {
+    active: boolean
+    message: string
+}
 
-type InitialStateType = {
+export type InitialStateType = {
     value: number
     startValue: number
     maxValue: number
+    notify: NotifyType
 }
-
-// type ActionType = ReturnType<typeof incAC> | ReturnType<typeof resetAC> | ReturnType<typeof startValueAC>
-
-// type ActionType = {
-//     type: string
-//     newStartValue: number
-//     newMaxValue: number
-// }
 
 type ActionType = any
 
+const initialState: InitialStateType = {
+    value: 0,
+    startValue: 2,
+    maxValue: 8,
+    notify: {
+        active: true,
+        message: "Set the value and press 'OK'"
+    }
+}
 
-export const  counterReducer = (state: InitialStateType, action: ActionType): InitialStateType => {
+export const  counterReducer = (state: InitialStateType = initialState, action: ActionType): InitialStateType => {
     switch (action.type){
+
+        case "SET_STATUS_NOTIFY":
+            return {...state, notify:{...state.notify, active: action.status, message: action.message }}
+
         case "INC":
             return {...state, value: state.value + 1}
 
@@ -30,14 +39,22 @@ export const  counterReducer = (state: InitialStateType, action: ActionType): In
             return {...state, startValue: action.newStartValue}
 
         case "MAX_START":
+            console.log(action.newMaxValue)
             return {...state, maxValue: action.newMaxValue}
 
         default:
-            throw new Error("I don't understand this action type")
+            return state
     }
 }
 
 
+export const notifyAC = (status:boolean, message: string) =>{
+    return {
+        type: "SET_STATUS_NOTIFY",
+        status,
+        message
+    }
+}
 
 export const incAC = () => {
     return {type: "INC"}

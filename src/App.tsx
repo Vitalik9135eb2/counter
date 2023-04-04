@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import {Counter} from "./Counter/Counter";
-import {InputNameType, SettingCounter} from "./SettingCounter/SettingCounter";
+// import {InputNameType, SettingCounter} from "./SettingCounter/SettingCounter";
 
 // function App() {
 //

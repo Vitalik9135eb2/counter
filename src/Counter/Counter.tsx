@@ -1,64 +1,48 @@
-import React, {useCallback, useEffect, useReducer, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useReducer, useState} from 'react';
 import {CounterDisplay} from "./CounterDisplay";
 import {Btn} from "./Btn";
-import {counterReducer, incAC, resetAC} from "../state/counter-reducer";
+import { incAC, resetAC} from "../state/counter-reducer";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "../state/store";
 
 
 
-
-type CounterPropsType={
-    // startValue: number
-    // maxValue: number
-    notify: string | null
-    disabled: boolean
-}
-
-export const Counter = React.memo( (props:CounterPropsType) => {
+export const Counter = React.memo( () => {
     console.log("Counter is loaded")
 
+    const  value = useSelector<AppRootStateType, number>( state => state.counter.value)
+    const startValue = useSelector<AppRootStateType, number>( state => state.counter.startValue)
+    const maxValue = useSelector<AppRootStateType, number>( state => state.counter.maxValue)
+    const active = useSelector<AppRootStateType, boolean>( state => state.counter.notify.active)
+
+
+    const dispatch = useDispatch()
+
+
     useEffect(()=>{
-        dispatchCounterValue(resetAC())
+        dispatch(resetAC())
     },[])
 
-    const [counterValue, dispatchCounterValue] = useReducer(counterReducer,{
-        value: 0,
-        startValue: 2,
-        maxValue: 8
-    })
-
     const btnIncHandler = useCallback(() =>{
-        dispatchCounterValue(incAC())
+        dispatch(incAC())
     },[])
 
     const btnResetHandler = useCallback( () =>{
         const action = resetAC()
-        dispatchCounterValue(action)
+        dispatch(action)
     },[])
-
-
-    const forIncClass = props.notify || counterValue.value === counterValue.maxValue
-    const forResetClass = props.notify || counterValue.value === counterValue.startValue
-
-    const btnIncClassName =  forIncClass ? "disabled" : ""
-    const btnResetClassName = forResetClass ? "disabled" : ""
 
 
     return (
         <div className={"counter"}>
-            <CounterDisplay counter={counterValue.value}
-                            notify={props.notify}
-                            maxValue={counterValue.maxValue}
-                            disabled={props.disabled}
-            />
+            <CounterDisplay />
 
             <div className={"btnWrap"}>
-                <Btn callBack={btnIncHandler} name={"inc"} class={btnIncClassName}/>
-                <Btn callBack={btnResetHandler} name={"reset"} class={btnResetClassName}/>
+                <Btn  disabled={ value === maxValue || active} callBack={btnIncHandler} name={"inc"} />
+                <Btn disabled={value === startValue || active} callBack={btnResetHandler} name={"reset"} />
             </div>
 
         </div>
     );
 });
-
-
 
