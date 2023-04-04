@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b545819-608e-456f-9b8c-6bcb05c3200e" name="Changes" comment="add redux context">
+    <list default="true" id="5b545819-608e-456f-9b8c-6bcb05c3200e" name="Changes" comment="fix counter component">
+      <change afterPath="$PROJECT_DIR$/src/SettingCounter/InputWithLabel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppWithReducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppWithRedux.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Btn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Btn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppWithRedux.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppWithRedux.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Counter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/counter-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/counter-reducer.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/counter-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/counter-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -175,7 +171,7 @@
       <workItem from="1680443836891" duration="799000" />
       <workItem from="1680530531288" duration="614000" />
       <workItem from="1680593975091" duration="3017000" />
-      <workItem from="1680602289587" duration="17808000" />
+      <workItem from="1680602289587" duration="20912000" />
     </task>
     <task id="LOCAL-00001" summary="New counter full">
       <created>1669565355143</created>
@@ -212,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680444633848</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix counter component">
+      <created>1680622845000</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680622845000</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +237,7 @@
     <MESSAGE value="fix check input" />
     <MESSAGE value="add reducer and tests" />
     <MESSAGE value="add redux context" />
-    <option name="LAST_COMMIT_MESSAGE" value="add redux context" />
+    <MESSAGE value="fix counter component" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix counter component" />
   </component>
 </project>

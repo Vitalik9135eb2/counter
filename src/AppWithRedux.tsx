@@ -11,8 +11,6 @@ export const AppWithRedux = React.memo( () => {
 
     console.log("App is loaded")
 
-
-
     return (
     <div className="App">
         <Counter/>

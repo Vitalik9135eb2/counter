@@ -39,7 +39,6 @@ export const  counterReducer = (state: InitialStateType = initialState, action: 
             return {...state, startValue: action.newStartValue}
 
         case "MAX_START":
-            console.log(action.newMaxValue)
             return {...state, maxValue: action.newMaxValue}
 
         default:

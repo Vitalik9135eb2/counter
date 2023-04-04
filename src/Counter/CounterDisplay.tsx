@@ -1,13 +1,10 @@
 import React from "react";
-import {InitialStateType} from "../state/counter-reducer";
 import {useSelector} from "react-redux";
 import {AppRootStateType} from "../state/store";
 
-type CounterDisplayPropsType ={
-    // counter: InitialStateType
-}
 
-export const CounterDisplay = React.memo( (props:CounterDisplayPropsType) => {
+
+export const CounterDisplay = React.memo( () => {
     console.log("CounterDisplay is loaded")
 
     const displayClass = "notify"
@@ -16,11 +13,9 @@ export const CounterDisplay = React.memo( (props:CounterDisplayPropsType) => {
     const  value = useSelector<AppRootStateType, number>( state => state.counter.value)
 
 
-    const display = <span className={displayClass}>{active ? message: value}</span>
-
     return(
         <div className={"displayWrap"}>
-            {display}
+            <span className={displayClass}>{active ? message: value}</span>
         </div>
     )
 })
