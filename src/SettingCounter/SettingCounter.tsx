@@ -3,6 +3,7 @@ import {Btn} from "../Counter/Btn";
 import {useDispatch, useSelector} from "react-redux";
 import {maxValueAC, notifyAC, resetAC, startValueAC} from "../state/counter-reducer";
 import {AppRootStateType} from "../state/store";
+import {InputWithLabel} from "./InputWithLabel";
 
 
 
@@ -42,30 +43,21 @@ export const SettingCounter = React.memo( () => {
 
     }, [temporaryStartValue, temporaryMaxValue])
 
-    const onChangeStartValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeStartValueHandler = useCallback( (e: ChangeEvent<HTMLInputElement>) => {
         setTemporaryStartValue(parseInt(e.currentTarget.value))
         dispatch(notifyAC(true, "Set the value and press 'OK'"))
-    }
+    }, [temporaryStartValue])
 
-    const onChangeMaxValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeMaxValueHandler = useCallback( (e: ChangeEvent<HTMLInputElement>) => {
         setTemporaryMaxValue(parseInt(e.currentTarget.value))
         dispatch(notifyAC(true, "Set the value and press 'OK'"))
-    }
+    },[temporaryMaxValue])
 
     return (
         <div className={"counter"}>
-            <div>
-                <span>Start Value</span>
-                <input value={temporaryStartValue} onChange={onChangeStartValueHandler}
-                       type="number"/>
-            </div>
 
-
-            <div>
-                <span>Max Value</span>
-                <input value={temporaryMaxValue} onChange={onChangeMaxValueHandler}
-                       type="number"/>
-            </div>
+            <InputWithLabel label={"Start value"} value={temporaryStartValue} callback={onChangeStartValueHandler} type={"number"}/>
+            <InputWithLabel label={"Max value"} value={temporaryMaxValue} callback={onChangeMaxValueHandler} type={"number"}/>
 
              <Btn disabled={!active} callBack={btnSetHandler} name={"OK"}/>
 

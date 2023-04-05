@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b545819-608e-456f-9b8c-6bcb05c3200e" name="Changes" comment="fix counter component">
+    <list default="true" id="5b545819-608e-456f-9b8c-6bcb05c3200e" name="Changes" comment="fixed all components in counter">
       <change afterPath="$PROJECT_DIR$/src/SettingCounter/InputWithLabel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppWithRedux.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppWithRedux.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Counter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/CounterDisplay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SettingCounter/SettingCounter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/counter-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/counter-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,26 +33,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/React/it-incubator/counter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;D:/React/it-incubator/counter/node_modules/react-scripts&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\React\\it-incubator\\counter\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/React/it-incubator/counter/src/SettingCounter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "D:/React/it-incubator/counter/node_modules/react-scripts",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "ts.external.directory.path": "D:\\React\\it-incubator\\counter\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\React\it-incubator\counter\src\SettingCounter" />
       <recent name="D:\React\it-incubator\counter\src" />
     </key>
   </component>
@@ -171,7 +168,8 @@
       <workItem from="1680443836891" duration="799000" />
       <workItem from="1680530531288" duration="614000" />
       <workItem from="1680593975091" duration="3017000" />
-      <workItem from="1680602289587" duration="20912000" />
+      <workItem from="1680602289587" duration="21082000" />
+      <workItem from="1680686726563" duration="757000" />
     </task>
     <task id="LOCAL-00001" summary="New counter full">
       <created>1669565355143</created>
@@ -215,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680622845000</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed all components in counter">
+      <created>1680630498935</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680630498935</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +243,7 @@
     <MESSAGE value="add reducer and tests" />
     <MESSAGE value="add redux context" />
     <MESSAGE value="fix counter component" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix counter component" />
+    <MESSAGE value="fixed all components in counter" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed all components in counter" />
   </component>
 </project>
